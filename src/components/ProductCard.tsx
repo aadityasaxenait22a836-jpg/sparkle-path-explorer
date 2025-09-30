@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react";
+import { ChevronLeft, ChevronRight, ShoppingCart, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export interface Product {
   id: string;
@@ -14,6 +15,7 @@ export interface Product {
   originalPrice: number;
   quantity: number;
   images: string[];
+  benefits: string[];
 }
 
 interface ProductCardProps {
@@ -22,6 +24,7 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const navigate = useNavigate();
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
@@ -99,7 +102,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           </Badge>
         </div>
       </CardContent>
-      <CardFooter className="p-4 pt-0 flex items-center justify-between">
+      <CardFooter className="p-4 pt-0 flex items-center justify-between gap-2">
         <div>
           <div className="flex items-baseline gap-2">
             <span className="text-2xl font-bold text-primary">₹{product.price.toLocaleString()}</span>
@@ -107,9 +110,19 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           </div>
           <p className="text-xs text-muted-foreground mt-1">Quantity: {product.quantity} available</p>
         </div>
-        <Button variant="elegant" size="icon" className="shrink-0">
-          <ShoppingCart className="h-4 w-4" />
-        </Button>
+        <div className="flex gap-2">
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="shrink-0"
+            onClick={() => navigate(`/product/${product.id}`)}
+          >
+            <Eye className="h-4 w-4" />
+          </Button>
+          <Button variant="elegant" size="icon" className="shrink-0">
+            <ShoppingCart className="h-4 w-4" />
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   );
