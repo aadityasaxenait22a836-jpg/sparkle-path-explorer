@@ -1,0 +1,187 @@
+import { Product } from "@/components/ProductCard";
+import blueSapphireImg from "@/assets/blue-sapphire.jpg";
+import yellowSapphireImg from "@/assets/yellow-sapphire.jpg";
+import emeraldImg from "@/assets/emerald.jpg";
+import amethystImg from "@/assets/amethyst.jpg";
+import tigerEyeImg from "@/assets/tiger-eye.jpg";
+import catsEyeImg from "@/assets/cats-eye.jpg";
+import opalImg from "@/assets/opal.jpg";
+
+export const gemstonesData: Record<string, { subcategories: Record<string, Product[]> }> = {
+  Precious: {
+    subcategories: {
+      "Blue Sapphire": [
+        {
+          id: "BS001",
+          name: "Royal Blue Sapphire",
+          description: "Rare Ceylon blue sapphire with exceptional clarity and deep royal blue color. Perfect for astrological benefits and luxury jewelry.",
+          category: "Precious",
+          subcategory: "Blue Sapphire",
+          price: 45000,
+          originalPrice: 65000,
+          quantity: 5,
+          images: [blueSapphireImg, blueSapphireImg],
+        },
+        {
+          id: "BS002",
+          name: "Kashmir Blue Sapphire",
+          description: "Premium Kashmir origin sapphire with velvety blue appearance. Highly sought after for its mystical properties and investment value.",
+          category: "Precious",
+          subcategory: "Blue Sapphire",
+          price: 85000,
+          originalPrice: 120000,
+          quantity: 3,
+          images: [blueSapphireImg, blueSapphireImg],
+        },
+      ],
+      "Yellow Sapphire": [
+        {
+          id: "YS001",
+          name: "Golden Yellow Sapphire",
+          description: "Brilliant yellow sapphire from Ceylon with exceptional fire and transparency. Ideal for Jupiter remedies and prosperity.",
+          category: "Precious",
+          subcategory: "Yellow Sapphire",
+          price: 38000,
+          originalPrice: 52000,
+          quantity: 8,
+          images: [yellowSapphireImg, yellowSapphireImg],
+        },
+        {
+          id: "YS002",
+          name: "Pukhraj Premium Stone",
+          description: "Natural unheated yellow sapphire with vivid golden hue. Known for bringing wisdom, wealth and marital harmony.",
+          category: "Precious",
+          subcategory: "Yellow Sapphire",
+          price: 42000,
+          originalPrice: 58000,
+          quantity: 6,
+          images: [yellowSapphireImg, yellowSapphireImg],
+        },
+      ],
+      Emerald: [
+        {
+          id: "EM001",
+          name: "Colombian Emerald",
+          description: "Vivid green Colombian emerald with excellent clarity. Associated with Mercury for enhanced communication and intellect.",
+          category: "Precious",
+          subcategory: "Emerald",
+          price: 55000,
+          originalPrice: 78000,
+          quantity: 4,
+          images: [emeraldImg, emeraldImg],
+        },
+        {
+          id: "EM002",
+          name: "Zambian Emerald Premium",
+          description: "Deep green Zambian emerald with exceptional luster. Perfect for meditation and spiritual growth practices.",
+          category: "Precious",
+          subcategory: "Emerald",
+          price: 48000,
+          originalPrice: 68000,
+          quantity: 7,
+          images: [emeraldImg, emeraldImg],
+        },
+      ],
+    },
+  },
+  Semiprecious: {
+    subcategories: {
+      Amethyst: [
+        {
+          id: "AM001",
+          name: "Brazilian Amethyst",
+          description: "Deep purple amethyst crystal with natural druzy formation. Promotes calmness, clarity and spiritual awareness.",
+          category: "Semiprecious",
+          subcategory: "Amethyst",
+          price: 5500,
+          originalPrice: 8000,
+          quantity: 15,
+          images: [amethystImg, amethystImg],
+        },
+        {
+          id: "AM002",
+          name: "Uruguayan Amethyst Geode",
+          description: "Premium quality amethyst with rich violet hues. Excellent for meditation spaces and energy healing practices.",
+          category: "Semiprecious",
+          subcategory: "Amethyst",
+          price: 7200,
+          originalPrice: 10500,
+          quantity: 12,
+          images: [amethystImg, amethystImg],
+        },
+      ],
+      "Tiger Eye": [
+        {
+          id: "TE001",
+          name: "Golden Tiger Eye",
+          description: "Chatoyant golden brown tiger eye with striking light effects. Known for protection, courage and personal power.",
+          category: "Semiprecious",
+          subcategory: "Tiger Eye",
+          price: 3200,
+          originalPrice: 4800,
+          quantity: 20,
+          images: [tigerEyeImg, tigerEyeImg],
+        },
+        {
+          id: "TE002",
+          name: "Red Tiger Eye Stone",
+          description: "Rare red tiger eye with deep auburn shimmer. Enhances motivation, confidence and overcoming challenges.",
+          category: "Semiprecious",
+          subcategory: "Tiger Eye",
+          price: 4100,
+          originalPrice: 6200,
+          quantity: 18,
+          images: [tigerEyeImg, tigerEyeImg],
+        },
+      ],
+      "Cat's Eye": [
+        {
+          id: "CE001",
+          name: "Chrysoberyl Cat's Eye",
+          description: "Natural cat's eye chrysoberyl with sharp eye effect. Powerful stone for Ketu remedies and protection from evil.",
+          category: "Semiprecious",
+          subcategory: "Cat's Eye",
+          price: 28000,
+          originalPrice: 42000,
+          quantity: 6,
+          images: [catsEyeImg, catsEyeImg],
+        },
+        {
+          id: "CE002",
+          name: "Premium Lehsunia",
+          description: "High quality cat's eye with excellent chatoyancy. Brings fortune, protects from hidden enemies and black magic.",
+          category: "Semiprecious",
+          subcategory: "Cat's Eye",
+          price: 32000,
+          originalPrice: 48000,
+          quantity: 4,
+          images: [catsEyeImg, catsEyeImg],
+        },
+      ],
+      Opal: [
+        {
+          id: "OP001",
+          name: "Australian Fire Opal",
+          description: "Mesmerizing play-of-color opal with vibrant flashes. Enhances creativity, passion and emotional expression.",
+          category: "Semiprecious",
+          subcategory: "Opal",
+          price: 18000,
+          originalPrice: 26000,
+          quantity: 9,
+          images: [opalImg, opalImg],
+        },
+        {
+          id: "OP002",
+          name: "White Opal Premium",
+          description: "Ethereal white opal with rainbow iridescence. Associated with purity, hope and amplifying positive emotions.",
+          category: "Semiprecious",
+          subcategory: "Opal",
+          price: 15000,
+          originalPrice: 22000,
+          quantity: 11,
+          images: [opalImg, opalImg],
+        },
+      ],
+    },
+  },
+};
